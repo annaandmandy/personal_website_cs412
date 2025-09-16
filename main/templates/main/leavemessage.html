@@ -1,0 +1,94 @@
+<!-- File: leavemessage.html -->
+<!-- Author: Hsiang Yu Huang (huanghy@bu.edu), 9/12/2025 -->
+<!-- Description: CS412 HW0-a -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+{% endblock %}
+{% block content%}
+    <header>
+        <h1>Leave Me A Message!</h1>
+    </header>
+    <form action="https://cs-webapps.bu.edu/cgi-bin/util/formmailer.py" method="post" style="width: 500px; margin: 0 auto;">
+        <fieldset style="border: none;">
+            <input type="hidden" name="mailto" value="huanghy@bu.edu">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <label for="name">Name : </label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <label for="email">Email : </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <label for="phone">Phone Number : </label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <label for="residency">Residency : </label>
+                <select id="residency" name="residency">
+                    <option value="">Select your Residency</option>
+                    <option value="allston">Allston</option>
+                    <option value="brighton">Brighton</option>
+                    <option value="fenway">Fenway</option>
+                    <option value="brookline">Brookline</option>
+                    <option value="somerville">Somerville</option>
+                    <option value="taiwan">Taiwan</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <label for="zodiac">Zodiac Sign : </label>
+                <select id="zodiac" name="zodiac">
+                    <option value="">Select your zodiac sign</option>
+                    <option value="aries">Aries (3/21 - 4/19)</option>
+                    <option value="taurus">Taurus (4/20 - 5/20)</option>
+                    <option value="gemini">Gemini (5/21 - 6/20)</option>
+                    <option value="cancer">Cancer (6/21 - 7/22)</option>
+                    <option value="leo">Leo (7/23 - 8/22)</option>
+                    <option value="virgo">Virgo (8/23 - 9/22)</option>
+                    <option value="libra">Libra (9/23 - 10/22)</option>
+                    <option value="scorpio">Scorpio (10/23 - 11/21)</option>
+                    <option value="sagittarius">Sagittarius (11/22 - 12/21)</option>
+                    <option value="capricorn">Capricorn (12/22 - 1/19)</option>
+                    <option value="aquarius">Aquarius (1/20 - 2/18)</option>
+                    <option value="pisces">Pisces (2/19 - 3/20)</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 10px;">MBTI Personality Type :</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 5px;">
+                    <label><input type="radio" name="mbti" value="intj"> INTJ</label>
+                    <label><input type="radio" name="mbti" value="intp"> INTP</label>
+                    <label><input type="radio" name="mbti" value="entj"> ENTJ</label>
+                    <label><input type="radio" name="mbti" value="entp"> ENTP</label>
+                    <label><input type="radio" name="mbti" value="infj"> INFJ</label>
+                    <label><input type="radio" name="mbti" value="infp"> INFP</label>
+                    <label><input type="radio" name="mbti" value="enfj"> ENFJ</label>
+                    <label><input type="radio" name="mbti" value="enfp"> ENFP</label>
+                    <label><input type="radio" name="mbti" value="istj"> ISTJ</label>
+                    <label><input type="radio" name="mbti" value="isfj"> ISFJ</label>
+                    <label><input type="radio" name="mbti" value="estj"> ESTJ</label>
+                    <label><input type="radio" name="mbti" value="esfj"> ESFJ</label>
+                    <label><input type="radio" name="mbti" value="istp"> ISTP</label>
+                    <label><input type="radio" name="mbti" value="isfp"> ISFP</label>
+                    <label><input type="radio" name="mbti" value="estp"> ESTP</label>
+                    <label><input type="radio" name="mbti" value="esfp"> ESFP</label>
+                    <label style="grid-column: span 4; text-align: center; margin-top: 10px;"><input type="radio" name="mbti" value="unknown"> I don't know my MBTI type</label>
+                </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="message" style="display: block; margin-bottom: 10px;">Message :</label>
+                <textarea id="message" name="message" rows="6" style="width: 100%; padding: 8px;" required></textarea>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">Send Message</button>
+            </div>
+            
+        </fieldset>
+    </form>
+{% endblock %}

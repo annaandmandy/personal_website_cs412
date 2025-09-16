@@ -1,0 +1,26 @@
+<!-- File: quoteofaday.html -->
+<!-- Author: Hsiang Yu Huang (huanghy@bu.edu), 9/15/2025 -->
+<!-- Description: CS412 HW1 -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'quotes/css/styles.css' %}">
+{% endblock %}
+{% block content %}
+    <header>
+        <h1>Past Quotes</h1>
+    </header>
+    {% if existing_quotes %}
+        {% for q in existing_quotes %}
+        <div>
+            <p>{{q}}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No quotes available.</p>
+    {% endif %}
+    <a href="/quotes" style="text-decoration: none;">
+        <button>Back to Quotes</button>
+    </a>
+{% endblock %}

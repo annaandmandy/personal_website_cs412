@@ -1,0 +1,91 @@
+<!-- File: index.html -->
+<!-- Author: Hsiang Yu Huang (huanghy@bu.edu), 9/11/2025 -->
+<!-- Description: CS412 HW0 -->
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+{% endblock %}
+{% block content %}
+    <header>
+        <h1>Things about Me</h1>
+    </header>
+    <table style="width: 60%; margin-top: 5px;">
+        <tr>
+            <td>Hsiang Yu Huang</td>
+            <td rowspan="3" style="text-align: center; ">
+                <img src="{% static 'main/images/anna-welcome.png' %}"
+                style="max-width: 100%; height: auto; margin-left:8%;">
+            </td>
+        </tr>
+        <tr>
+            <td>MS</td>
+        </tr>
+        <tr>
+            <td>Data Science</td>
+        </tr>
+    </table>
+    <h2>Short Bio</h2>
+    <p>
+        Hello! My name is Hsiang Yu Huang, 
+        and you can just call me Anna! I come from Taiwan, 
+        and came to the U.S. for Master's Degree. 
+        I love dogs, and I had a poodle at Taiwan. 
+        
+    </p>
+    <h2>Activities and Interests</h2>
+    <table>
+        <tr>
+            <td>
+                <img src="{% static 'main/images/pikmin_walk.png' %}"
+                width="300" height="300">
+            </td>
+            <td>
+                <h3>Walking</h3>
+            </td>
+            <td>
+                <p>
+                    I play Pikmin Bloom, 
+                    which is a game that will encourage you to walk, I 
+                    am currently on a weekly challenge to walk 10K steps 
+                    with 5 people.
+                </p>
+            </td>
+            <td>
+                <a href="https://pikminbloom.com/">pikminbloom</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{% static 'main/images/drawing_cat.jpg' %}"
+                width="300" height="300">
+            </td>
+            <td>
+                <h3>Drawing</h3>
+            </td>
+            <td>
+                <p>I enjoyed drawing on my ipad about things around me. 
+                    You will see more drawings on this website.╰(*°▽°*)╯</p>
+            </td>
+            <td>
+                <a href="https://www.instagram.com/eina.0__0/">Instagram</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{% static 'main/images/silksong.png' %}"
+                width="300" height="300">
+            </td>
+            <td>
+                <h3>Playing Video Games</h3>
+            </td>
+            <td>
+                <p>Recently I've been playing Hollow Knight Silksong, 
+                    and it is driving me crazy. Do anyone want to help me beat the Boss(；′⌒`)</p>
+            </td>
+            <td>
+                <a href="https://hollowknightsilksong.com/">Silksong</a>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(246, 239, 253);
+}
+
+table {
+    text-align: center;
+    border-style: double;
+    padding: 10px;
+    table-layout: fixed;
+    margin: 0 auto;
+}
+
+table:nth-child(6) {
+    background-color: rgb(211, 211, 252);
+}
+
+td {
+    border-style: double;
+    vertical-align:middle;
+}
+
+h1 {
+    text-align: center;
+    color: darkslateblue;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    text-align: center;
+}
