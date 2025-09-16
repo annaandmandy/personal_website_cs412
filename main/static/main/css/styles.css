@@ -4,10 +4,16 @@ body {
 
 table {
     text-align: center;
-    border-style: double;
     padding: 10px;
     table-layout: fixed;
     margin: 0 auto;
+    border: none;
+    border-collapse: seperate;
+    border-spacing: 40px 0;
+    background: rgb(240, 221, 241);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 10px;
 }
 
 table:nth-child(6) {
@@ -15,8 +21,9 @@ table:nth-child(6) {
 }
 
 td {
-    border-style: double;
-    vertical-align:middle;
+    vertical-align: middle; 
+    text-align: center; 
+    padding: 10px;
 }
 
 h1 {
@@ -34,4 +41,8 @@ h2 {
 
 p {
     text-align: center;
+}
+
+img {
+    border-radius: 15px;
 }
