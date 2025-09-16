@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(246, 239, 253);
+}
+
+table {
+    text-align: center;
+    padding: 10px;
+    table-layout: fixed;
+    margin: 0 auto;
+    border: none;
+    border-collapse: seperate;
+    border-spacing: 40px 0;
+    background: rgb(240, 221, 241);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+table:nth-child(6) {
+    background-color: rgb(211, 211, 252);
+}
+
+td {
+    vertical-align: middle; 
+    text-align: center; 
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: darkslateblue;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    border-radius: 15px;
+}
