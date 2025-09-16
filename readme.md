@@ -1,4 +1,4 @@
-This project was made based on BU CS412 \n
+This project was made based on BU CS412 <br />
 My Website: https://annaandmandy.pythonanywhere.com/
 
 # create/start the django project in the current directory
