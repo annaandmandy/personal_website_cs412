@@ -1,3 +1,5 @@
+This project was made based on BU CS412
+
 # create/start the django project in the current directory
 pipenv shell
 
