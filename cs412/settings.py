@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'quotes'
+    'quotes',
+    'mini_insta'
 ]
 
 MIDDLEWARE = [
