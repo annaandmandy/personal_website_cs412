@@ -1,0 +1,14 @@
+<!-- File: show_profile.html -->
+<!-- Author: Hsiang Yu Huang (huanghy@bu.edu), 9/11/2025 -->
+<!-- Description: CS412 HW3 -->
+
+{% extends 'mini_insta/base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'mini_insta/css/styles.css' %}">
+{% endblock %}
+{% block content%}
+    <header>
+        <h1>{{object.display_name}}</h1>
+    </header>
+{% endblock %}

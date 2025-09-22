@@ -12,10 +12,7 @@
     </head>
     <body>
         <nav>
-            <a href="/">Home</a>
-            <a href="/quotes/">Quotes</a>
-            <a href="/contact/">Contact</a>
-            <a href="/mini_insta/">Profiles</a>
+            <a href="/profile/<int:pk>">Profiles</a>
         </nav>
         <main>
             {% block content%}
@@ -23,6 +20,7 @@
         </main>
         <footer>
             <p>&copy; 2025 Hsiang Yu (Anna) Huang</p>
+            <p>Images and Descriptions retrieved from WikiPedia.</p>
         </footer>
     </body>
  </html>

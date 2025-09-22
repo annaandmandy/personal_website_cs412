@@ -1,0 +1,31 @@
+<!-- File: show_all_profiles.html -->
+<!-- Author: Hsiang Yu Huang (huanghy@bu.edu), 9/11/2025 -->
+<!-- Description: CS412 HW3 -->
+
+{% extends 'mini_insta/base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'mini_insta/css/styles.css' %}">
+{% endblock %}
+{% block content%}
+    <header>
+        <h1>Display all Profiles</h1>
+    </header>
+    <main>
+        <div class="profiles-grid">
+            {% for profile in object_list %}
+            <a href="{% url 'show_profile' pk=profile.pk %}">
+                <div class="profile-card">
+                    <div style="width: 300px; height: 300px; overflow: hidden; position: relative;">
+                        <img src="{{ profile.profile_image_url }}" alt="{{ profile.display_name }}" 
+                        style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); object-fit:none; width: 300px; height: 300px;">
+                    </div>
+                    <h3>{{ profile.display_name }}</h3>
+                    <p>@{{ profile.username}}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        
+    </main>
+{% endblock %}
