@@ -28,3 +28,5 @@ class ProfileCreateView(CreateView):
     fields = ['username', 'display_name', 'profile_image_url', 'bio_text']
     success_url = reverse_lazy('profiles')
 
+def login(request):
+    return render(request, 'mini_insta/log-in.html')
