@@ -3,6 +3,7 @@ My Website: https://annaandmandy.pythonanywhere.com/
 
 # create/start the django project in the current directory
 pipenv shell
+cd cs412
 
 # run this command to start your django project called 412.
 django-admin startproject cs412

@@ -11,3 +11,6 @@ class ProfileListView(ListView):
 class ProfileDetailView(DetailView):
     model = Profile
     template_name = 'mini_insta/show_profile.html'
+    context_object_name = "object"
+    slug_field = "username" # database column name
+    slug_url_kwarg = "username" # url param name

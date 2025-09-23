@@ -9,16 +9,16 @@
 {% endblock %}
 {% block content%}
     <header>
-        <h1>Display all Profiles</h1>
+        <h1 class="title">These are all my friends!</h1>
     </header>
     <main>
         <div class="profiles-grid">
             {% for profile in object_list %}
-            <a href="{% url 'show_profile' pk=profile.pk %}">
+            <a href="{% url 'show_profile' profile.username %}">
                 <div class="profile-card">
-                    <div style="width: 300px; height: 300px; overflow: hidden; position: relative;">
+                    <div style="width: 100%; aspect-ratio: 1 / 1; overflow: hidden; position: relative;">
                         <img src="{{ profile.profile_image_url }}" alt="{{ profile.display_name }}" 
-                        style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); object-fit:none; width: 300px; height: 300px;">
+                        style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <h3>{{ profile.display_name }}</h3>
                     <p>@{{ profile.username}}</p>

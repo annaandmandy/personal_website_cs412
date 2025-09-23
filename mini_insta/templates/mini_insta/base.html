@@ -1,26 +1,29 @@
 <!-- File: base.html -->
 <!-- Author: Hsiang Yu Huang (huanghy@bu.edu), 9/15/2025 -->
 <!-- Description: CS412 base template containing navbar and footer -->
- <!DOCTYPE html>
- <html>
-    <head>
-        <meta charset="UTF-8">
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        {% block head %}{% endblock %}
-        <title>Anna's Personal Website</title>
-    </head>
-    <body>
-        <nav>
-            <a href="/profile/<int:pk>">Profiles</a>
-        </nav>
-        <main>
-            {% block content%}
-            {% endblock %}
-        </main>
-        <footer>
-            <p>&copy; 2025 Hsiang Yu (Anna) Huang</p>
-            <p>Images and Descriptions retrieved from WikiPedia.</p>
-        </footer>
-    </body>
- </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mini_insta/css/base.css' %}">
+    {% block head %}{% endblock %}
+    <title>Anna's Personal Website</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-center">
+            <a href="/mini_insta/">All Profiles</a>
+            <a href="/mini_insta/become_friend">Become My Friend</a>
+        </div>
+        <a href="/mini_insta/log_in" class="log-in">Log In</a>
+    </nav>
+    <main>
+        {% block content%}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Hsiang Yu (Anna) Huang</p>
+    </footer>
+</body>
+</html>
