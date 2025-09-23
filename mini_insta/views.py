@@ -14,3 +14,8 @@ class ProfileDetailView(DetailView):
     context_object_name = "object"
     slug_field = "username" # database column name
     slug_url_kwarg = "username" # url param name
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["on_profile_page"] = True
+        return context
