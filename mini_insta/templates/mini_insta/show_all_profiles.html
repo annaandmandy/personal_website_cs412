@@ -14,7 +14,7 @@
     <main>
         <div class="profiles-grid">
             {% for profile in object_list %}
-            <a href="{% url 'show_profile' profile.username %}">
+            <a href="{% url 'show_profile' profile.pk %}">
                 <div class="profile-card">
                     <div style="width: 100%; aspect-ratio: 1 / 1; overflow: hidden; position: relative;">
                         <img src="{{ profile.profile_image_url }}" alt="{{ profile.display_name }}" 
