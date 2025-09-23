@@ -16,3 +16,6 @@ python manage.py makemigrations
 
 # apply the migrations
 python manage.py migrate
+
+# collect static
+python manage.py collectstatic
