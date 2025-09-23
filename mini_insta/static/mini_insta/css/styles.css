@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 2rem;
+    color: #333;
 }
 
 .profile-card {
@@ -128,4 +129,64 @@ body {
     display: flex;
     justify-content: center;
     padding: 2rem 2rem;
+}
+
+/* form */
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+small {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  color: #333;
+}
+
+.form-field label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 60%;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* submit button sytle - same as quote button */
+.submit-btn {
+    display: block;
+    width: 150px;
+    margin: 2rem auto;
+    padding: 10px 15px;
+    background-color: #FFD93D;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 6px solid rgb(250, 247, 217);
+    color: #333;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 50px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #fc9a11, #ff891a);
 }

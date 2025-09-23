@@ -14,11 +14,11 @@
     <nav>
         <div class="nav-center">
             {% if on_profile_page %}
-                <a href="/mini_insta/">Back to All Profiles</a>
+                <a href="{% url 'profiles' %}">Back to All Profiles</a>
             {% else %}
                 <a href="/">Anna's Profile</a>
             {% endif %}
-            <a href="/mini_insta/become_friend">Become My Friend</a>
+            <a href="{% url 'create_profile' %}">Become My Friend</a>
         </div>
         <a href="/mini_insta/log_in" class="log-in">Log In</a>
     </nav>

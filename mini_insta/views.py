@@ -1,7 +1,9 @@
 from django.shortcuts import render
 # import class-based view template to use
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Profile
+from django.urls import reverse_lazy # to redict through page name
+
 
 # Create your views here.
 class ProfileListView(ListView):
@@ -19,3 +21,10 @@ class ProfileDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context["on_profile_page"] = True
         return context
+    
+class ProfileCreateView(CreateView):
+    model = Profile
+    template_name = 'mini_insta/become_friend.html'
+    fields = ['username', 'display_name', 'profile_image_url', 'bio_text']
+    success_url = reverse_lazy('profiles')
+

@@ -11,24 +11,24 @@
     <header>
         <h1>Leave Me A Message!</h1>
     </header>
-    <form action="https://cs-webapps.bu.edu/cgi-bin/util/formmailer.py" method="post" style="width: 500px; margin: 0 auto;">
+    <form action="https://cs-webapps.bu.edu/cgi-bin/util/formmailer.py" method="post" class="form-container">
         <fieldset style="border: none;">
             <input type="hidden" name="mailto" value="huanghy@bu.edu">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <div class="form-field">
                 <label for="name">Name : </label>
                 <input type="text" id="name" name="name" required>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <div class="form-field">
                 <label for="email">Email : </label>
                 <input type="email" id="email" name="email" required>
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <div class="form-field">
                 <label for="phone">Phone Number : </label>
                 <input type="tel" id="phone" name="phone">
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <div class="form-field">
                 <label for="residency">Residency : </label>
                 <select id="residency" name="residency">
                     <option value="">Select your Residency</option>
@@ -41,7 +41,7 @@
                     <option value="other">Other</option>
                 </select>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <div class="form-field">
                 <label for="zodiac">Zodiac Sign : </label>
                 <select id="zodiac" name="zodiac">
                     <option value="">Select your zodiac sign</option>
@@ -59,7 +59,7 @@
                     <option value="pisces">Pisces (2/19 - 3/20)</option>
                 </select>
             </div>
-            <div style="margin-bottom: 15px;">
+            <div style="margin-bottom: 15px; color: #333;">
                 <label style="display: block; margin-bottom: 10px;">MBTI Personality Type :</label>
                 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 5px;">
                     <label><input type="radio" name="mbti" value="intj"> INTJ</label>
@@ -81,12 +81,12 @@
                     <label style="grid-column: span 4; text-align: center; margin-top: 10px;"><input type="radio" name="mbti" value="unknown"> I don't know my MBTI type</label>
                 </div>
             </div>
-            <div style="margin-bottom: 15px;">
+            <div style="margin-bottom: 15px; color: #333;">
                 <label for="message" style="display: block; margin-bottom: 10px;">Message :</label>
-                <textarea id="message" name="message" rows="6" style="width: 100%; padding: 8px;" required></textarea>
+                <textarea id="message" name="message" rows="6" style="width: 100%; padding: 8px; border: 1px solid #ccc;" required></textarea>
             </div>
             <div style="text-align: center; margin-top: 20px;">
-                <button type="submit">Send Message</button>
+                <button type="submit" class="submit-btn">Send Message</button>
             </div>
             
         </fieldset>

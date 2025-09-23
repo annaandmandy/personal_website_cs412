@@ -4,5 +4,50 @@
 <link rel="stylesheet" href="{% static 'mini_insta/css/styles.css' %}">
 {% endblock %}
 {% block content%}
-
+    <header>
+        <h1 style="display: flex; justify-content: center; margin-top: 2rem; color: #333;">Become My Friend!</h1>
+    </header>
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %} <!--prevent from malicious website to take action-->
+            <!--username-->
+            <div class="form-field">
+                <label for="{{ form.username.id_for_label }}">Username: </label>
+                {{ form.username }}
+                {% if form.username.errors %}
+                    <div class="error">{{ form.username.errors }}</div>
+                {% endif %}
+            </div>
+            <!--display name-->
+            <div class="form-field">
+                <label for="{{ form.display_name.id_for_label }}">Display name: </label>
+                {{ form.display_name }}
+                {% if form.display_name.errors %}
+                    <div class="error">{{ form.display_name.errors }}</div>
+                {% endif %}
+            </div>
+            <!--image url-->
+            <div class="form-field">
+                <label for="{{ form.profile_image_url.id_for_label }}">Image Url: </label>
+                <input type="url"
+               name="{{ form.profile_image_url.name }}" 
+                id="{{ form.profile_image_url.id_for_label }}" 
+                value="https://picsum.photos/200"
+                placeholder="https://picsum.photos/200">
+                {% if form.profile_image_url.errors %}
+                    <div class="error">{{ form.profile_image_url.errors }}</div>
+                {% endif %}
+            </div>
+            <small>( Enter a Url for your profile image (e.g. https://i.imgur.com/h3x3V9v.jpeg) )</small>
+            <!--bio_text-->
+            <div class="form-field">
+                <label for="{{ form.bio_text.id_for_label }}">Bio: </label>
+                {{ form.bio_text }}
+                {% if form.bio_text.errors %}
+                    <div class="error">{{ form.bio_text.errors }}</div>
+                {% endif %}
+            </div>
+            <button type="submit" class="submit-btn">Create Profile</button>
+        </form>
+    </div>
 {% endblock %}

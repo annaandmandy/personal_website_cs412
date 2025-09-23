@@ -68,3 +68,33 @@ p {
   align-items: center; 
   gap: 20px;         
 }
+
+
+.form-field {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+small {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  color: #333;
+}
+
+.form-field label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 60%;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
