@@ -1,13 +1,13 @@
 
 body {
-    background-color: rgb(246, 239, 253);
+    background-color: #fffceb;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: darkslateblue;
-  padding-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    padding-top: 20px;
 }
 
 table {
@@ -16,8 +16,9 @@ table {
     border-collapse: seperate;
     border-spacing: 40px 0;
     padding: 20px;
-    background: rgb(240, 221, 241);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: rgb(250, 247, 217);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 6px solid #FFD93D;
     border-radius: 15px;
     padding: 10px;
     table-layout: fixed;
@@ -35,18 +36,22 @@ button {
     width: 150px;
     margin: 15px auto;
     padding: 10px 15px;
-    background-color: #a27adf;
-    color: white;
+    background-color: #FFD93D;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 6px solid rgb(250, 247, 217);
+    color: #333;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin-bottom: 50px;
 }
 
 button:hover {
-  background-color: #8a60d0;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #fc9a11, #ff891a);
 }
 
 p {
