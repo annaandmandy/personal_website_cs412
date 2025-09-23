@@ -19,3 +19,6 @@ python manage.py migrate
 
 # collect static
 python manage.py collectstatic
+
+# unzip on pythonanywhere
+unzip django.zip
