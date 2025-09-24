@@ -111,6 +111,9 @@ body {
     text-align: left;
     padding: 1rem 8rem;
     margin-top: 2rem;
+    flex-direction: row;
+    display: flex; 
+    gap: 2rem;
 }
 
 .section-title::after {
@@ -123,6 +126,26 @@ body {
     background: #dddddd;
     border-radius: 2px;
     transform: translateX(-50%);
+}
+
+.section-title button {
+    width: 150px;
+    padding: 8px 8px;
+    background-color: #FFD93D;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 6px solid rgb(250, 247, 217);
+    color: #333;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-title button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #fc9a11, #ff891a);
 }
 
 .messages {

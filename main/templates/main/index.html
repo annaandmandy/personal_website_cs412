@@ -10,16 +10,21 @@
     <header>
         <h1>Things about Me</h1>
     </header>
-    <div class="profile-info">
-        <div class="profile-text">
-            <h3>Hsiang Yu Huang</h3>
-            <h4>Master Degree</h4>
-            <h4>Data Science</h4>
+    <div style="display:flex; flex-direction: row; align-items:center; justify-content:center; gap:0.5rem;">
+        <img src="{% static 'main/images/coco.GIF' %}" style="width:250px; height:auto; object-fit:contain;">
+        <div class="profile-info">
+            <div class="profile-text">
+                <h3>Hsiang Yu Huang</h3>
+                <h4>Master Degree</h4>
+                <h4>Data Science</h4>
+            </div>
+            <div class="profile-image">
+                <img src="{% static 'main/images/anna.jpg' %}">
+            </div>
         </div>
-        <div class="profile-image">
-            <img src="{% static 'main/images/anna.jpg' %}">
-        </div>
+        <img src="{% static 'main/images/tommy.GIF' %}" style="width:250px; height:auto; object-fit:contain;">
     </div>
+    
     <h2>Short Bio</h2>
     <p>
         Hello! My name is Hsiang Yu Huang, 
